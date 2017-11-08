@@ -1,0 +1,23 @@
+grammar fr.istic.imd.videogen.Videogen with org.eclipse.xtext.common.Terminals
+
+generate videogen "http://www.istic.fr/imd/videogen/Videogen"
+
+Model:
+	videos+=Video+;
+
+Video:
+	(Mandatory | Optionel | Alternatives )
+;
+	
+Mandatory:
+    'mandatory' 'videoseq' id=ID location=STRING;
+    
+Optionel:
+    'optional' 'videoseq' id=ID location=STRING;
+Alternatives:
+	'alternatives' id=ID '{'
+		(videos+=VideoSeq)+
+	'}'
+;
+VideoSeq:
+	'videoseq' id=ID location=STRING;
