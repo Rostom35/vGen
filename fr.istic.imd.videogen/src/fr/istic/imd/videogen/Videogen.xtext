@@ -3,21 +3,51 @@ grammar fr.istic.imd.videogen.Videogen with org.eclipse.xtext.common.Terminals
 generate videogen "http://www.istic.fr/imd/videogen/Videogen"
 
 Model:
-	videos+=Video+;
+	'VideoGen' '{'
+		videos+=Video*
+	'}'
+	;
 
 Video:
 	(Mandatory | Optionel | Alternatives )
 ;
 	
 Mandatory:
-    'mandatory' 'videoseq' id=ID location=STRING;
+    'mandatory' video=VideoSeq;
     
 Optionel:
-    'optional' 'videoseq' id=ID location=STRING;
+    'optional' video=VideoSeq;
 Alternatives:
 	'alternatives' id=ID '{'
 		(videos+=VideoSeq)+
 	'}'
 ;
+
 VideoSeq:
-	'videoseq' id=ID location=STRING;
+	'videoseq' id=ID? location=STRING (desciption=STRING)? (duration=Duration)? (prob=Probabilite)? (img=Img)?
+;
+
+Img:
+	'img' location=STRING (mem=Meme)?
+;
+
+Meme:
+	'Meme' '('
+		'up' infoUp=STRING ','
+		'down' infoDown=STRING
+	')'
+;
+
+
+Duration:
+	'duration' duration=INT 
+;
+
+Probabilite:
+	'Probability' prob=Prob
+;
+
+terminal Prob:
+	('0'..'9')
+;
+
