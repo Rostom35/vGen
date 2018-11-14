@@ -50,7 +50,7 @@ by its id or selector
 
 | Param | Type | Description |
 | --- | --- | --- |
-| module | <code>Route</code> | [config.json[routes]](config.json[routes]) |
+| module | <code>Route</code> | {@see config.json[routes]} |
 
 <a name="resolveScriptsLocation"></a>
 
@@ -97,4 +97,6 @@ Display the appropriate component for the target route
 | Param |
 | --- |
 | targetRoute | 
+
+ 
 
