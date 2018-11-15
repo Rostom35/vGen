@@ -24,7 +24,7 @@
 </dd>
 <dt><a href="#external_config">config</a></dt>
 <dd><p>The config must respect the following JSON Schema :<br/>&quot;!&quot; means that the key is required while &quot;?&quot; means that it&#39;s optional</p>
-<pre><code class="lang-JSON">   {
+<pre><code class="language-javascripton">   {
       &quot;assets&quot;: {
           &quot;url!&quot;: &quot;string&quot;,
           &quot;icons!&quot;: &quot;string&quot;,
@@ -99,7 +99,7 @@ The homepage view. Uses the [config](#external_config) widget to render each new
 
 ## config
 The config must respect the following JSON Schema :<br/>"!" means that the key is required while "?" means that it's optional
-```JSON
+```json
    {
       "assets": {
           "url!": "string",
