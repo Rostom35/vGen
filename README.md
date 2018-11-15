@@ -51,6 +51,9 @@
 </code></pre>
 <ul>
 <li>Use &quot;exact&quot; (by default its value is false) to perform a routing to the exact url not on an url which start whith &quot;url&quot;. It also means that you have to respect a * potential order.</li>
+<li>&quot;public&quot; (by default its value is false) means that the route is accessible by all</li>
+<li>&quot;component&quot; is used to specify which container&#39;s component to load</li>
+<li>&quot;action&quot; we execute an action when we are redirect to a specific route</li>
 </ul>
 </dd>
 <dt><a href="#external_views/layout">views/layout</a></dt>
@@ -129,6 +132,9 @@ The config must respect the following JSON Schema :<br/>"!" means that the key i
    }
 ```
 - Use "exact" (by default its value is false) to perform a routing to the exact url not on an url which start whith "url". It also means that you have to respect a * potential order.
+- "public" (by default its value is false) means that the route is accessible by all
+- "component" is used to specify which container's component to load
+- "action" we execute an action when we are redirect to a specific route
 
 **Kind**: global external  
 **Example**  
@@ -139,7 +145,6 @@ The config must respect the following JSON Schema :<br/>"!" means that the key i
       {"path": "/toto/"...}
    ]}
 Here we are not going to be able to route at "/toto/" because "/toto/" start with "/tot/" which is defined before "/toto/"
-- "public" (by default its value is false) means that the route is accessible by all
 ```
 <a name="external_views/layout"></a>
 
