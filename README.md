@@ -28,7 +28,7 @@ We want to develop a language for VideoGen, a system that will generate, from te
 <a name="new_app.js_new"></a>
 
 ### new app.js()
-NovatioApp the app(root) <b>element</b> [views/news](#external_views/news)
+NovatioApp the app(root) element
 
 <a name="external_views/index"></a>
 
@@ -49,6 +49,7 @@ The news widget.
 The base layout from which all other views inherit from.
 
 **Kind**: global external  
+  
   
   
  
