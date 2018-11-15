@@ -25,10 +25,9 @@ We want to develop a language for VideoGen, a system that will generate, from te
 <dd><p>The homepage view. Uses the <a href="#external_config">config</a> widget to render each news article.</p>
 </dd>
 <dt><a href="#external_config">config</a></dt>
-<dd><p>The config must respect the following JSON Schema :
-  {
-      &quot;$id&quot;: &quot;<a href="https://example.com/person.schema.json&quot;">https://example.com/person.schema.json&quot;</a>,
-      &quot;$schema&quot;: &quot;<a href="http://json-schema.org/draft-07/schema#&quot;">http://json-schema.org/draft-07/schema#&quot;</a>,
+<dd><p>The config must respect the following JSON Schema :</p>
+<pre><code class="lang-{">      &quot;$id&quot;: &quot;https://example.com/person.schema.json&quot;,
+      &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
       &quot;title&quot;: &quot;Person&quot;,
       &quot;type&quot;: &quot;object&quot;,
       &quot;properties&quot;: {
@@ -46,7 +45,8 @@ We want to develop a language for VideoGen, a system that will generate, from te
               &quot;minimum&quot;: 0
           }
       }
-   }</p>
+   }
+</code></pre>
 </dd>
 <dt><a href="#external_views/layout">views/layout</a></dt>
 <dd><p>The base layout from which all other views inherit from.</p>
@@ -97,7 +97,7 @@ The homepage view. Uses the [config](#external_config) widget to render each new
 
 ## config
 The config must respect the following JSON Schema :
-  {
+  ```{
       "$id": "https://example.com/person.schema.json",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Person",
@@ -117,7 +117,7 @@ The config must respect the following JSON Schema :
               "minimum": 0
           }
       }
-   }
+   }```
 
 **Kind**: global external  
 <a name="external_views/layout"></a>
@@ -126,6 +126,7 @@ The config must respect the following JSON Schema :
 The base layout from which all other views inherit from.
 
 **Kind**: global external  
+ 
   
   
   
