@@ -1,5 +1,3 @@
-# vGen
-We want to develop a language for VideoGen, a system that will generate, from textual specifications, a video generator on the Web.
 ## Classes
 
 <dl>
@@ -126,21 +124,3 @@ The config must respect the following JSON Schema :
 The base layout from which all other views inherit from.
 
 **Kind**: global external  
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
-
-
- 
-
- 
-
