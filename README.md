@@ -50,7 +50,7 @@
    }
 </code></pre>
 <ul>
-<li>Use &quot;exact&quot; to perform a routing to the exact url not on an url which start whith &quot;url&quot;. It also means that you have to respect a potential order.</li>
+<li>Use &quot;exact&quot; (by default its value is false) to perform a routing to the exact url not on an url which start whith &quot;url&quot;. It also means that you have to respect a * potential order.</li>
 </ul>
 </dd>
 <dt><a href="#external_views/layout">views/layout</a></dt>
@@ -128,16 +128,18 @@ The config must respect the following JSON Schema :<br/>"!" means that the key i
       }]
    }
 ```
-- Use "exact" to perform a routing to the exact url not on an url which start whith "url". It also means that you have to respect a potential order.
+- Use "exact" (by default its value is false) to perform a routing to the exact url not on an url which start whith "url". It also means that you have to respect a * potential order.
 
 **Kind**: global external  
 **Example**  
 ```js
-{ ..."routes": [{
-          "path!": "string",
-          "exact?": boolean...},
-          {"path!": "string",
-          "exact?": boolean...}]}
+{.."routes": [
+      {"path": "/tot/",
+      "exact": false},
+      {"path": "/toto/"...}
+   ]}
+Here we are not going to be able to route at "/toto/" because "/toto/" start with "/tot/" which is defined before "/toto/"
+- "public" (by default its value is false) means that the route is accessible by all
 ```
 <a name="external_views/layout"></a>
 
