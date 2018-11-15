@@ -43,7 +43,8 @@ by its id or selector</p>
 <a name="new_page.js_new"></a>
 
 ### new page.js()
-Modules are described in a json file see [views/news](#external_views/news) to get more informations on the config file
+NovationPage an HTMLElement which is respensible for loading component from <b>modules</b> to the container.<br/>
+             Modules are described in a json file see [views/news](#external_views/news) to get more informations on the config file
 
 <a name="createElementFromSelectorOrID"></a>
 
@@ -108,6 +109,7 @@ The news widget.
 The base layout from which all other views inherit from.
 
 **Kind**: global external  
+  
   
   
   
