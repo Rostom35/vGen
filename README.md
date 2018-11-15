@@ -44,7 +44,6 @@ by its id or selector</p>
 
 ### new page.js()
 NovationPage an HTMLElement which is respensible for loading component from <b>modules</b> to the container.
-Modules are described in a json file see [external:config](external:config) to get more informations on the config file
 
 <a name="createElementFromSelectorOrID"></a>
 
@@ -109,6 +108,7 @@ The news widget.
 The base layout from which all other views inherit from.
 
 **Kind**: global external  
+  
   
   
   
