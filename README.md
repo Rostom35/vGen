@@ -24,7 +24,7 @@
 </dd>
 <dt><a href="#external_config">config</a></dt>
 <dd><p>The config must respect the following JSON Schema :<br/>&quot;!&quot; means that the key is required while &quot;?&quot; means that it&#39;s optional</p>
-<pre><code>   {
+<pre><code class="lang-JSON">   {
       &quot;assets&quot;: {
           &quot;url!&quot;: &quot;string&quot;,
           &quot;icons!&quot;: &quot;string&quot;,
@@ -48,7 +48,8 @@
           &quot;links?&quot;: [{ &quot;path&quot;: &quot;string&quot;, &quot;title&quot;: &quot;string&quot; }]
       }]
    }
-</code></pre></dd>
+</code></pre>
+</dd>
 <dt><a href="#external_views/layout">views/layout</a></dt>
 <dd><p>The base layout from which all other views inherit from.</p>
 </dd>
@@ -98,7 +99,7 @@ The homepage view. Uses the [config](#external_config) widget to render each new
 
 ## config
 The config must respect the following JSON Schema :<br/>"!" means that the key is required while "?" means that it's optional
-```
+```JSON
    {
       "assets": {
           "url!": "string",
