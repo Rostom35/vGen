@@ -49,6 +49,9 @@
       }]
    }
 </code></pre>
+<ul>
+<li>Use &quot;exact&quot; to perform a routing to the exact url not on an url which start whith &quot;url&quot;. It also means that you have to respect a potential order.</li>
+</ul>
 </dd>
 <dt><a href="#external_views/layout">views/layout</a></dt>
 <dd><p>The base layout from which all other views inherit from.</p>
@@ -125,8 +128,17 @@ The config must respect the following JSON Schema :<br/>"!" means that the key i
       }]
    }
 ```
+- Use "exact" to perform a routing to the exact url not on an url which start whith "url". It also means that you have to respect a potential order.
 
 **Kind**: global external  
+**Example**  
+```js
+{ ..."routes": [{
+          "path!": "string",
+          "exact?": boolean...},
+          {"path!": "string",
+          "exact?": boolean...}]}
+```
 <a name="external_views/layout"></a>
 
 ## views/layout
