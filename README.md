@@ -24,7 +24,8 @@
 </dd>
 <dt><a href="#external_config">config</a></dt>
 <dd><p>The config must respect the following JSON Schema :</p>
-<pre><code class="lang-{">      &quot;$id&quot;: &quot;https://example.com/person.schema.json&quot;,
+<pre><code>   {
+      &quot;$id&quot;: &quot;https://example.com/person.schema.json&quot;,
       &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
       &quot;title&quot;: &quot;Person&quot;,
       &quot;type&quot;: &quot;object&quot;,
@@ -44,8 +45,7 @@
           }
       }
    }
-</code></pre>
-</dd>
+</code></pre></dd>
 <dt><a href="#external_views/layout">views/layout</a></dt>
 <dd><p>The base layout from which all other views inherit from.</p>
 </dd>
@@ -95,7 +95,8 @@ The homepage view. Uses the [config](#external_config) widget to render each new
 
 ## config
 The config must respect the following JSON Schema :
-  ```{
+```
+   {
       "$id": "https://example.com/person.schema.json",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Person",
@@ -115,7 +116,8 @@ The config must respect the following JSON Schema :
               "minimum": 0
           }
       }
-   }```
+   }
+```
 
 **Kind**: global external  
 <a name="external_views/layout"></a>
