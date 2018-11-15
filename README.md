@@ -23,27 +23,30 @@
 <dd><p>The homepage view. Uses the <a href="#external_config">config</a> widget to render each news article.</p>
 </dd>
 <dt><a href="#external_config">config</a></dt>
-<dd><p>The config must respect the following JSON Schema :</p>
+<dd><p>The config must respect the following JSON Schema :<br/>&quot;!&quot; means that the key is required while &quot;?&quot; means that it&#39;s optional</p>
 <pre><code>   {
-      &quot;$id&quot;: &quot;https://example.com/person.schema.json&quot;,
-      &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
-      &quot;title&quot;: &quot;Person&quot;,
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;properties&quot;: {
-          &quot;firstName&quot;: {
-              &quot;type&quot;: &quot;string&quot;,
-              &quot;description&quot;: &quot;The person&#39;s first name.&quot;
+      &quot;assets&quot;: {
+          &quot;url!&quot;: &quot;string&quot;,
+          &quot;icons!&quot;: &quot;string&quot;,
+          &quot;logo!&quot;: &quot;string&quot;,
+          &quot;webcomponents!&quot;: &quot;string&quot;,
+          &quot;style!&quot;: &quot;string&quot;
+      },
+      &quot;routes&quot;: [{
+          &quot;path!&quot;: &quot;string&quot;,
+          &quot;exact?&quot;: boolean,
+          &quot;public?&quot;: boolean,
+          &quot;component?&quot;: &quot;string&quot;,
+          &quot;icon?&quot;: &quot;string&quot;,
+          &quot;action?&quot;: &quot;string&quot;,
+          &quot;title?&quot;: &quot;string&quot;,
+          &quot;module?&quot;: {
+              &quot;id!&quot;: &quot;string&quot;,
+              &quot;url!&quot;: &quot;string&quot;,
+              &quot;scripts!&quot;: [&quot;string&quot;]
           },
-          &quot;lastName&quot;: {
-              &quot;type&quot;: &quot;string&quot;,
-              &quot;description&quot;: &quot;The person&#39;s last name.&quot;
-          },
-          &quot;age&quot;: {
-              &quot;description&quot;: &quot;Age in years which must be equal to or greater than zero.&quot;,
-              &quot;type&quot;: &quot;integer&quot;,
-              &quot;minimum&quot;: 0
-          }
-      }
+          &quot;links?&quot;: [{ &quot;path&quot;: &quot;string&quot;, &quot;title&quot;: &quot;string&quot; }]
+      }]
    }
 </code></pre></dd>
 <dt><a href="#external_views/layout">views/layout</a></dt>
@@ -94,28 +97,31 @@ The homepage view. Uses the [config](#external_config) widget to render each new
 <a name="external_config"></a>
 
 ## config
-The config must respect the following JSON Schema :
+The config must respect the following JSON Schema :<br/>"!" means that the key is required while "?" means that it's optional
 ```
    {
-      "$id": "https://example.com/person.schema.json",
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "Person",
-      "type": "object",
-      "properties": {
-          "firstName": {
-              "type": "string",
-              "description": "The person's first name."
+      "assets": {
+          "url!": "string",
+          "icons!": "string",
+          "logo!": "string",
+          "webcomponents!": "string",
+          "style!": "string"
+      },
+      "routes": [{
+          "path!": "string",
+          "exact?": boolean,
+          "public?": boolean,
+          "component?": "string",
+          "icon?": "string",
+          "action?": "string",
+          "title?": "string",
+          "module?": {
+              "id!": "string",
+              "url!": "string",
+              "scripts!": ["string"]
           },
-          "lastName": {
-              "type": "string",
-              "description": "The person's last name."
-          },
-          "age": {
-              "description": "Age in years which must be equal to or greater than zero.",
-              "type": "integer",
-              "minimum": 0
-          }
-      }
+          "links?": [{ "path": "string", "title": "string" }]
+      }]
    }
 ```
 
